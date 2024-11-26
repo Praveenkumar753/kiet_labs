@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://kiet-labs-1.onrender.com';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
