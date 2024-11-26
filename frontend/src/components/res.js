@@ -17,7 +17,7 @@ const FormResponses = () => {
     useEffect(() => {
         const fetchResponses = async () => {
             try {
-                const res = await axios.get('https://kiet-labs-1.onrender.com/api/formresponses');
+                const res = await axios.get('https://kiet-labs-backend.onrender.com/api/formresponses');
                 setResponses(res.data);
             } catch (err) {
                 setError('Failed to fetch responses');
@@ -71,7 +71,7 @@ const FormResponses = () => {
             const relevantEdits = Object.entries(editValues).filter(([key]) => key.startsWith(`${id}-`));
             for (const [key, value] of relevantEdits) {
                 const [rowId, field] = key.split('-');
-                await axios.put(`https://kiet-labs-1.onrender.com/api/formresponses/${rowId}/${field}`, { newValue: value });
+                await axios.put(`https://kiet-labs-backend.onrender.com/api/formresponses/${rowId}/${field}`, { newValue: value });
             }
             const updatedResponses = responses.map(res => {
                 const updatedRes = { ...res };
@@ -95,7 +95,7 @@ const FormResponses = () => {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this response?')) {
             try {
-                await axios.delete(`https://kiet-labs-1.onrender.com/api/formresponses/${id}`);
+                await axios.delete(`https://kiet-labs-backend.onrender.com/api/formresponses/${id}`);
                 setResponses(responses.filter(res => res._id !== id));
             } catch (err) {
                 console.error("Delete failed:", err);
