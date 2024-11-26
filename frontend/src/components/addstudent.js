@@ -11,7 +11,7 @@ const AddStudent = () => {
         TYPE: '',
     });
 
-    const backendURL = 'https://kiet-labs-1.onrender.com';
+    const backendURL = 'https://kiet-labs-backend.onrender.com';
 
     // Handle input changes
     const handleChange = (e) => {
