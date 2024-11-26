@@ -1,0 +1,174 @@
+/* styles.css */
+.page-container {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.form-wrapper {
+    display: flex;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.form-section {
+    width: 40px;
+    flex: 1;
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+.availability-section {
+    width: 400px;
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+.readonly {
+    background-color: #f5f5f5 !important;
+    cursor: not-allowed;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+h2, h3 {
+    margin: 0 0 24px 0;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .form-wrapper {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 16px; /* Reduce gap for smaller screens */
+    }
+
+    .form-section {
+        width: auto; /* Form takes full width */
+        flex: initial; /* Remove flex-grow */
+    }
+
+    .availability-section {
+        width: auto; /* Availability takes full width */
+        position: static; /* Remove sticky positioning */
+        margin-top: 16px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 16px; /* Increase font size for better mobile readability */
+    }
+
+    table {
+        display: block;  /* Make table scrollable horizontally */
+        overflow-x: auto;
+        white-space: nowrap; /* Prevent table cell content wrapping */
+        -webkit-overflow-scrolling: touch; /* smoother scrolling on iOS */
+    }
+
+    th, td {
+        padding: 10px; /* Reduce padding in table cells */
+        white-space: nowrap;  /* Prevent cell content from wrapping */
+    }
+}
+
+@media (max-width: 480px) {
+    .page-container {
+        padding: 12px;
+    }
+
+    .form-section,
+    .availability-section {
+        padding: 16px;
+    }
+
+    .form-group label {
+        font-size: 14px; /* Slightly reduce label size */
+    }
+}
