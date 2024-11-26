@@ -13,7 +13,7 @@ const LabAvailability = () => {
     const [selectedYear, setSelectedYear] = useState('');
     const [selectedDepartment, setSelectedDepartment] = useState('');
     const [selectedType, setSelectedType] = useState('');
-    const backendURL = process.env.REACT_APP_BACKEND_URL || 'https://kiet-labs-1.onrender.com';
+    const backendURL = process.env.REACT_APP_BACKEND_URL || 'https://kiet-labs-backend.onrender.com';
 
     const getAvailableLabs = (department) => {
         return department === 'CSC' ? ['Cyber'] : ['Robotics', 'NLP', 'CV'];
