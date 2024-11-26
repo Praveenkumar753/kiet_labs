@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-const BASE_URL = 'https://kiet-labs-1.onrender.com';
+const BASE_URL = 'https://kiet-labs-backend.onrender.com';
 const UploadFile = () => {
     const [file, setFile] = useState(null);
 
