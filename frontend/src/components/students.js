@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-const BASE_URL = 'https://kiet-labs-1.onrender.com';
+const BASE_URL = 'https://kiet-labs-backend.onrender.com';
 const StudentSummary = () => {
     const [summaryData, setSummaryData] = useState([]);
     const [loading, setLoading] = useState(true);
