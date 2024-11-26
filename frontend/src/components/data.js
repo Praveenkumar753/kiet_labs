@@ -16,7 +16,7 @@ const ShowStudents = () => {
     const [filters, setFilters] = useState({ COL: '', YEAR: '', DEPT: '', TYPE: '' });
     const [uniqueFilterOptions, setUniqueFilterOptions] = useState({ COL: [], YEAR: [], DEPT: [], TYPE: [] });
 
-    const backendURL = 'http://localhost:5000';
+    const backendURL = 'https://kiet-labs-1.onrender.com';
 
     const fetchStudents = async () => {
         try {
