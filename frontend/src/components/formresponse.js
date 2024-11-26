@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './formresponse.css';
 import * as XLSX from 'xlsx';
-const BASE_URL = 'https://kiet-labs-1.onrender.com';
+const BASE_URL = 'https://kiet-labs-backend.onrender.com';
 const FormResponses = () => {
     const [responses, setResponses] = useState([]);
     const [loading, setLoading] = useState(true);
