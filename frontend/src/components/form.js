@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './form.css';
-const BASE_URL = 'https://kiet-labs-1.onrender.com';
+const BASE_URL = 'https://kiet-labs-backend.onrender.com';
 function StudentRegistrationForm() {
     const [formData, setFormData] = useState({
         college: '',
